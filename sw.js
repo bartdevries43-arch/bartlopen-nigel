@@ -1,5 +1,5 @@
 /* Eenvoudige offline-cache voor Run Coach. Verhoog CACHE bij elke update. */
-const CACHE = "runcoach-nigel-v1-c2-c3-logo2";
+const CACHE = "runcoach-nigel-v1-c2-c3-logo3";
 const ASSETS = ["./","./index.html","./styles.css?v=1-c2-c3","./app.js?v=1-c2-c3","./coach.jpg","./coach-logo.png","./bartlopen-runcoach.png","./icon-192.png","./icon-512.png","./apple-touch-icon.png","./manifest.json"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });

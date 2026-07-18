@@ -112,17 +112,17 @@ const zo  = (o) => ({ day: "zo", dayLabel: "Zondag",    kind: "Doelrace",       
 const PLAN = [
   { week: 1, dates: "13–19 jul", phase: "Fase 1 · Basis leggen", sessions: [
     ma({ zone: "duur",  km: 6,  title: "6 km rustig",        goal: "Rustig aan drie loopdagen wennen", blocks: ["6 km op 6:10–6:40/km", "Korte, soepele pas, kuiten ontspannen"] }),
-    don({ zone: "tempo", km: 6, title: "6 km met 5×2 min vlot", goal: "Aan tempo wennen, pees ontzien", blocks: ["1,5 km inlopen + 4 versnellingen", "5×2 min vlot (~5:20/km)", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "tempo", km: 6, title: "6 km met 5×2 min vlot", goal: "Aan tempo wennen, pees ontzien", blocks: ["1,5 km inlopen + 4 versnellingen", "5×2 min vlot (~5:20/km)", "4×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 9,  title: "9 km lang",          goal: "Vertrouwde lange duur", blocks: ["9 km op 6:15–6:45/km", "Rustig starten, sterk eindigen"] }),
   ]},
   { week: 2, dates: "20–26 jul", phase: "Fase 1 · Basis leggen", sessions: [
     ma({ zone: "duur",  km: 6,  title: "6 km rustig",        goal: "Herstel & volume", blocks: ["6 km op 6:10–6:40/km"] }),
-    don({ zone: "tempo", km: 7, title: "4×3 min vlot",       goal: "Tempo uitbreiden", blocks: ["1,5 km inlopen + 4 versnellingen", "4×3 min @ 5:15–5:25/km", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "tempo", km: 7, title: "4×3 min vlot",       goal: "Tempo uitbreiden", blocks: ["1,5 km inlopen + 4 versnellingen", "4×3 min @ 5:15–5:25/km", "3×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 11, title: "11 km lang",         goal: "Duur opbouwen", blocks: ["11 km op 6:15–6:45/km", "Drinken oefenen onderweg"] }),
   ]},
   { week: 3, dates: "27 jul–2 aug", phase: "Fase 1 · Basis leggen", sessions: [
     ma({ zone: "duur",  km: 7,  title: "7 km rustig",        goal: "Volume", blocks: ["7 km op 6:10–6:40/km"] }),
-    don({ zone: "tempo", km: 8, title: "2×2 km drempel",     goal: "Drempel aanspreken", blocks: ["2 km inlopen + 3 versnellingen", "2×2 km @ 5:05–5:20/km", "3 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "tempo", km: 8, title: "2×2 km drempel",     goal: "Drempel aanspreken", blocks: ["2 km inlopen + 3 versnellingen", "2×2 km @ 5:05–5:20/km", "3 min rustig dribbelen tussen de twee blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 13, title: "13 km lang",         goal: "Langer op de benen", blocks: ["13 km op 6:15–6:45/km", "Laatste 3 km iets vlotter op gevoel"] }),
   ]},
   { week: 4, dates: "3–9 aug", phase: "Fase 1 · Basis leggen", recovery: true, sessions: [
@@ -137,7 +137,7 @@ const PLAN = [
   ]},
   { week: 6, dates: "17–23 aug", phase: "Fase 2 · Wedstrijdtempo erin", sessions: [
     ma({ zone: "duur",  km: 7,  title: "7 km rustig",        goal: "Volume", blocks: ["7 km op 6:10–6:40/km"] }),
-    don({ zone: "tempo", km: 9, title: "3×2 km drempel",     goal: "Drempelvolume", blocks: ["2 km inlopen", "3×2 km @ 5:05–5:20/km", "3 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "tempo", km: 9, title: "3×2 km drempel",     goal: "Drempelvolume", blocks: ["2 km inlopen", "3×2 km @ 5:05–5:20/km", "2×3 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 15, title: "15 km lang",         goal: "Langer op de benen", blocks: ["15 km op 6:15–6:45/km"] }),
   ]},
   { week: 7, dates: "24–30 aug", phase: "Fase 2 · Wedstrijdtempo erin", sessions: [
@@ -157,7 +157,7 @@ const PLAN = [
   ]},
   { week: 10, dates: "14–20 sep", phase: "Fase 3 · Halve-specifiek", sessions: [
     ma({ zone: "duur",  km: 8,  title: "8 km rustig",        goal: "Volume", blocks: ["8 km op 6:10–6:40/km"] }),
-    don({ zone: "tempo", km: 10, title: "2×3 km drempel",    goal: "Drempel verlengen", blocks: ["2 km inlopen", "2×3 km @ 5:05–5:20/km", "3 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "tempo", km: 10, title: "2×3 km drempel",    goal: "Drempel verlengen", blocks: ["2 km inlopen", "2×3 km @ 5:05–5:20/km", "3 min rustig dribbelen tussen de twee blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 18, title: "18 km lang",         goal: "Langste duur richting de piek", blocks: ["18 km op 6:15–6:45/km", "Laatste 5 km richting wedstrijdtempo"] }),
   ]},
   { week: 11, dates: "21–27 sep", phase: "Fase 3 · Halve-specifiek", sessions: [
@@ -167,12 +167,12 @@ const PLAN = [
   ]},
   { week: 12, dates: "28 sep–4 okt", phase: "Fase 4 · Afbouw & scherpte", sessions: [
     ma({ zone: "duur",  km: 7,  title: "7 km rustig",        goal: "Volume omlaag", blocks: ["7 km op 6:10–6:40/km"] }),
-    don({ zone: "tempo", km: 9, title: "3×2 km drempel",     goal: "Scherp houden", blocks: ["2 km inlopen", "3×2 km @ 5:05–5:20/km", "3 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "tempo", km: 9, title: "3×2 km drempel",     goal: "Scherp houden", blocks: ["2 km inlopen", "3×2 km @ 5:05–5:20/km", "2×3 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 15, title: "15 km lang",         goal: "Laatste stevige lange loop", blocks: ["15 km op 6:15–6:45/km", "Comfortabel, niet forceren"] }),
   ]},
   { week: 13, dates: "5–11 okt", phase: "Fase 4 · Taper & race", taper: true, sessions: [
     ma({ zone: "duur",  km: 6,  title: "6 km rustig",        goal: "Taper start", blocks: ["6 km op 6:10–6:40/km"] }),
-    don({ zone: "doel", km: 7,  title: "3×1 km op wedstrijdtempo", goal: "Scherp & fris", blocks: ["2 km inlopen", "3×1 km @ 5:20–5:30/km", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    don({ zone: "doel", km: 7,  title: "3×1 km op wedstrijdtempo", goal: "Scherp & fris", blocks: ["2 km inlopen", "3×1 km @ 5:20–5:30/km", "2×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 12, title: "12 km soepel",       goal: "Laatste wat langere loop", blocks: ["12 km op 6:15–6:45/km"] }),
   ]},
   { week: 14, dates: "12–18 okt", phase: "Fase 4 · Taper & race", taper: true, race: true, sessions: [
